@@ -29,12 +29,12 @@ public class LoginSD
 		driver.get("http://leaftaps.com/opentaps/control/main");
 	}
 
-	@When("^enter login credential details$")
-	public void login_credential()
+	@When("^enter username \"(.*)\" and password \"(.*)\"$")
+	public void login_credential(String username, String password)
 	{
 		WebElement logo = driver.findElement(By.xpath("//img[contains(text(), logo)]"));
-		driver.findElement(By.id("username")).sendKeys("demosalesmanager");
-		driver.findElement(By.id("password")).sendKeys("crmsfa");
+		driver.findElement(By.id("username")).sendKeys("username");
+		driver.findElement(By.id("password")).sendKeys("password");
 	}
 
 	@And("^click login button$")
