@@ -1,70 +1,138 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("D:\\eclipse\\workspace\\Cucumber\\src\\main\\java\\Features\\Login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("D:\\eclipse\\workspace\\Cucumber\\src\\main\\java\\Features\\CreateLead.feature");
 formatter.feature({
-  "name": "Login into CRM site",
-  "description": "This feature to verify the login feature",
+  "name": "CreateLead Account",
+  "description": "\tCreating an lead account in testleaf site",
   "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "Login with valid credential details",
+  "name": "First Login and then create lead",
   "description": "",
   "keyword": "Scenario"
 });
 formatter.step({
-  "name": "navigate to login page",
+  "name": "Launch the leaf page",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "LoginSD.homepage()"
+  "location": "CreateLeadSD.launch()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "enter login credential details",
+  "name": "Login the leaf page",
+  "rows": [
+    {
+      "cells": [
+        "username",
+        "password"
+      ]
+    },
+    {
+      "cells": [
+        "demosalesmanager",
+        "crmsfa"
+      ]
+    }
+  ],
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CreateLeadSD.login(DataTable)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Verify successfully login page",
   "keyword": "When "
 });
 formatter.match({
-  "location": "LoginSD.login_credential()"
+  "location": "CreateLeadSD.successfullyLogin()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "click login button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "LoginSD.submit_login()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "page should login successfully",
+  "name": "click click crmsfa button",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "LoginSD.successfullLogin()"
+  "location": "CreateLeadSD.crmsfaButton()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "verify crmsfa enter button",
+  "name": "Verify crm main page",
   "keyword": "And "
 });
 formatter.match({
-  "location": "LoginSD.verifyButton()"
+  "location": "CreateLeadSD.crmMainPage()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "verify logout button",
+  "name": "Click Create Lead link",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "CreateLeadSD.createLead()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Enter user details to create lead",
+  "rows": [
+    {
+      "cells": [
+        "company_name",
+        "first_name",
+        "last_name",
+        "email"
+      ]
+    },
+    {
+      "cells": [
+        "amazon",
+        "manoj",
+        "kumar",
+        "manoj@gmail.com"
+      ]
+    },
+    {
+      "cells": [
+        "paypal",
+        "dinesh",
+        "raja",
+        "dinesh@mail.com"
+      ]
+    },
+    {
+      "cells": [
+        "cts",
+        "vikesh",
+        "raj",
+        "vk@gmail.com"
+      ]
+    }
+  ],
   "keyword": "And "
 });
 formatter.match({
-  "location": "LoginSD.verifyLogoutButton()"
+  "location": "CreateLeadSD.enterLead(DataTable)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "close the browser",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CreateLeadSD.tearDown()"
 });
 formatter.result({
   "status": "passed"

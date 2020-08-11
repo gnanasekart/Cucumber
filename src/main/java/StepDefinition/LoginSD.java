@@ -1,5 +1,6 @@
 package StepDefinition;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -11,7 +12,9 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.cucumber.datatable.DataTable;
 import org.junit.Assert;
+import io.cucumber.datatable.*;
 
 public class LoginSD 
 {
@@ -29,12 +32,28 @@ public class LoginSD
 		driver.get("http://leaftaps.com/opentaps/control/main");
 	}
 
-	@When("^enter username \"(.*)\" and password \"(.*)\"$")
+	/*
+	@When("^enter \"(.*)\" and \"(.*)\"$")
 	public void login_credential(String username, String password)
 	{
 		WebElement logo = driver.findElement(By.xpath("//img[contains(text(), logo)]"));
-		driver.findElement(By.id("username")).sendKeys("username");
-		driver.findElement(By.id("password")).sendKeys("password");
+		driver.findElement(By.id("username")).sendKeys(username);
+		driver.findElement(By.id("password")).sendKeys(password);
+	}*/
+
+	@When("^enter username and password$")
+	public void login_credential(DataTable credential)
+	{	
+		List<List<String>> data = credential.asLists(String.class);
+		System.out.println("size is :"+data.size());
+		driver.findElement(By.id("username")).sendKeys(data.get(0).get(0));
+		driver.findElement(By.id("password")).sendKeys(data.get(0).get(1));
+		
+//		for (int i = 0; i < data.size()-1; i++) {
+//			for(int j=0; j <= data.size()-1; j++){
+//				driver.findElement(By.id("username")).sendKeys(data.get(i).get(j));
+//				driver.findElement(By.id("password")).sendKeys(data.get(i).get(j));
+//			}		}
 	}
 
 	@And("^click login button$")
@@ -49,7 +68,7 @@ public class LoginSD
 		String title= driver.getTitle();
 		System.out.println("page title is :- "+title);
 		Assert.assertEquals("wrong title", "Leaftaps - TestLeaf Automation Platform", title);
-//		Assert.assertEquals("Leaftaps - TestLeaf Automation Platform", driver.getTitle().toString(), "wrong title");
+		//		Assert.assertEquals("Leaftaps - TestLeaf Automation Platform", driver.getTitle().toString(), "wrong title");
 
 	}
 
@@ -60,7 +79,7 @@ public class LoginSD
 		boolean logout = button.isDisplayed();
 		Assert.assertEquals(true, logout);
 	}
-	
+
 	@And("^verify logout button$")
 	public void verifyLogoutButton()
 	{
