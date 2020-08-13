@@ -1,6 +1,7 @@
 Feature: CreateLead Account
 	Creating an lead account in testleaf site
-	
+
+@Smoketestcase	
 Scenario: First Login and then create lead
 Given Launch the leaf page
 And Login the leaf page

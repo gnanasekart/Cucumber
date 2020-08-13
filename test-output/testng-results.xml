@@ -1,47 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="32419" started-at="2020-08-11T04:28:07Z" finished-at="2020-08-11T04:28:39Z">
+  <suite name="Default suite" duration-ms="501" started-at="2020-08-13T02:08:23Z" finished-at="2020-08-13T02:08:24Z">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:TestRunner.TRCreateLead@48e4374]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
-        <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:TestRunner.TestRunnerLogin@49d904ec]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.org.qa.testRunner.CreateLeadTR@69ea3742]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Test" duration-ms="32419" started-at="2020-08-11T04:28:07Z" finished-at="2020-08-11T04:28:39Z">
-      <class name="TestRunner.TRCreateLead">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:TestRunner.TRCreateLead@48e4374]" name="setUpClass" is-config="true" duration-ms="1" started-at="2020-08-11T04:28:16Z" finished-at="2020-08-11T04:28:16Z">
+    <test name="Default test" duration-ms="501" started-at="2020-08-13T02:08:23Z" finished-at="2020-08-13T02:08:24Z">
+      <class name="com.org.qa.testRunner.CreateLeadTR">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.org.qa.testRunner.CreateLeadTR@69ea3742]" name="setUpClass" is-config="true" duration-ms="160" started-at="2020-08-13T02:08:23Z" finished-at="2020-08-13T02:08:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:TestRunner.TRCreateLead@48e4374]" name="runScenario" duration-ms="23493" started-at="2020-08-11T04:28:16Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-08-11T04:28:39Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["First Login and then create lead"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["CreateLead Account"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:TestRunner.TRCreateLead@48e4374]" name="tearDownClass" is-config="true" duration-ms="47" started-at="2020-08-11T04:28:39Z" finished-at="2020-08-11T04:28:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- TestRunner.TRCreateLead -->
-      <class name="TestRunner.TestRunnerLogin">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:TestRunner.TestRunnerLogin@49d904ec]" name="setUpClass" is-config="true" duration-ms="112" started-at="2020-08-11T04:28:07Z" finished-at="2020-08-11T04:28:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:TestRunner.TestRunnerLogin@49d904ec]" name="runScenario" duration-ms="8675" started-at="2020-08-11T04:28:07Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-08-11T04:28:16Z">
+        <test-method status="SKIP" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.org.qa.testRunner.CreateLeadTR@69ea3742]" name="runScenario" duration-ms="207" started-at="2020-08-13T02:08:24Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-08-13T02:08:24Z">
           <params>
             <param index="0">
               <value>
@@ -50,18 +23,55 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA["Login into CRM site"]]>
+                <![CDATA["Login into CRM site ith hooks"]]>
               </value>
             </param>
           </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[This scenario is skipped]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: This scenario is skipped
+at cucumber.api.testng.TestCaseResultListener.getError(TestCaseResultListener.java:71)
+at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:69)
+at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:TestRunner.TestRunnerLogin@49d904ec]" name="tearDownClass" is-config="true" duration-ms="36" started-at="2020-08-11T04:28:16Z" finished-at="2020-08-11T04:28:16Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.org.qa.testRunner.CreateLeadTR@69ea3742]" name="tearDownClass" is-config="true" duration-ms="63" started-at="2020-08-13T02:08:24Z" finished-at="2020-08-13T02:08:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- TestRunner.TestRunnerLogin -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- com.org.qa.testRunner.CreateLeadTR -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
