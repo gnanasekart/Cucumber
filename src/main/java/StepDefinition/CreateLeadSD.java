@@ -13,6 +13,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.cucumber.datatable.DataTable;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CreateLeadSD 
 {
@@ -22,7 +23,8 @@ public class CreateLeadSD
 	@Given("Launch the leaf page")
 	public void launch()
 	{
-		System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver84.exe");
+		
+		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();

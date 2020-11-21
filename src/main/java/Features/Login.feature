@@ -37,7 +37,8 @@ When enter username and password
 And click login button
 Then page should login successfully
 And verify crmsfa enter button
-And verify logout button
+Then verify logout button
+And Close te browser
 #Then Click on create lead
 #And Enter user details 
 #| manoj | kumar | amazon |

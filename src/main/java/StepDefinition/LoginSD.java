@@ -7,23 +7,26 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.cucumber.datatable.DataTable;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 import org.junit.Assert;
 import io.cucumber.datatable.*;
 
 public class LoginSD 
 {
-	WebDriver driver;
+	RemoteWebDriver driver;
 
 	@Given("^navigate to login page$")
 	public void homepage()
 	{
-		System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver84.exe");
+		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
@@ -48,12 +51,6 @@ public class LoginSD
 		System.out.println("size is :"+data.size());
 		driver.findElement(By.id("username")).sendKeys(data.get(0).get(0));
 		driver.findElement(By.id("password")).sendKeys(data.get(0).get(1));
-		
-//		for (int i = 0; i < data.size()-1; i++) {
-//			for(int j=0; j <= data.size()-1; j++){
-//				driver.findElement(By.id("username")).sendKeys(data.get(i).get(j));
-//				driver.findElement(By.id("password")).sendKeys(data.get(i).get(j));
-//			}		}
 	}
 
 	@And("^click login button$")
@@ -68,7 +65,7 @@ public class LoginSD
 		String title= driver.getTitle();
 		System.out.println("page title is :- "+title);
 		Assert.assertEquals("wrong title", "Leaftaps - TestLeaf Automation Platform", title);
-		//		Assert.assertEquals("Leaftaps - TestLeaf Automation Platform", driver.getTitle().toString(), "wrong title");
+		//Assert.assertEquals("Leaftaps - TestLeaf Automation Platform", driver.getTitle().toString(), "wrong title");
 
 	}
 
@@ -80,12 +77,17 @@ public class LoginSD
 		Assert.assertEquals(true, logout);
 	}
 
-	@And("^verify logout button$")
+	@Then("^verify logout button$")
 	public void verifyLogoutButton()
 	{
 		String text = driver.findElement(By.xpath("//input[@type='submit']")).getAttribute("value");
 		System.out.println("button name is :" +text);
 		Assert.assertEquals( text, "Logout");
-		driver.quit();
+	}
+
+	@And("^Close te browser$")
+	public void closebrowser()
+	{
+		driver.close();
 	}
 }

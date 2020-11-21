@@ -15,6 +15,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.cucumber.datatable.DataTable;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LoginHooksSD {
 WebDriver driver;
@@ -22,7 +23,7 @@ WebDriver driver;
 	@Before
 	public void startup()
 	{
-		System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver84.exe");
+		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
@@ -39,6 +40,30 @@ WebDriver driver;
 	public void tearDown()
 	{
 		driver.quit();
+	}
+	
+	@Before("@First")
+	public void firstScenario()
+	{
+		System.out.println("Before the first scenario");
+	}
+	
+	@After("@First")
+	public void afterFirstScenario()
+	{
+		System.out.println("After first scenario");
+	}
+	
+	@Before("@Second")
+	public void beforeSecond()
+	{
+		System.out.println("before second scenario");
+	}
+	
+	@After("@Second")
+	public void AfterSecond()
+	{
+		System.out.println("After Seocnd Scenario");
 	}
 	
 	@Given("Click the Create Lead link")
@@ -72,4 +97,23 @@ WebDriver driver;
 		driver.findElement(By.xpath("//a[text()='Logout']")).click();
 	}
 
+	
+	@Given("Click Createlead button")
+	public void clickCreateLead()
+	{
+		driver.findElement(By.linkText("Create Lead")).click();
+	}
+	
+	@When("click findlead button")
+	public void Findleads()
+	{
+		driver.findElement(By.linkText("Find Leads")).click();
+		System.out.println("now in find lead page");
+	}
+	
+	@Then("Logout from that page")
+	public void logoutpage()
+	{
+		driver.findElement(By.xpath("//a[text()='Logout']")).click();
+	}
 }

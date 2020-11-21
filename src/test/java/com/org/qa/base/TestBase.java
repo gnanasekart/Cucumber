@@ -6,17 +6,19 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase 
 {
-
-	WebDriver driver;
-	Properties prop;
-
+	public static RemoteWebDriver driver;
+	public static Properties prop;
 
 	public TestBase() 
 	{
@@ -24,7 +26,8 @@ public class TestBase
 		FileInputStream file;
 		try 
 		{
-			file = new FileInputStream("./src/test/java/com/org/qa/config/config.properties");
+		file = new FileInputStream("D:\\eclipse\\workspace\\Cucumber\\src\\test\\java\\com\\org\\qa\\config\\config.properties");
+		prop.load(file);
 		}
 		catch (FileNotFoundException e1) 
 		{	
@@ -36,30 +39,31 @@ public class TestBase
 		}
 	}
 
-	public void Initialize()
+	public static void Initialize()
 	{
 		String browser = prop.getProperty("browser");
 		if(browser.equals("chrome"))
 		{
-			System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver84.exe");
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		}
 		else if(browser.equals("ff"))
 		{
-			System.setProperty("webdriver.gecko.driver", "./Drivers/geckodriver.exe");
+			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		}
 
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);	
 		driver.get(prop.getProperty("url"));
 	}
 
 	public void clearAndType(WebElement ele, String data)
 	{
-		try {
+		try 
+		{
 			ele.clear();
 			ele.sendKeys(data);
 		}
