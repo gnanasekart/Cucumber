@@ -23,7 +23,6 @@ public class CreateLeadSD
 	@Given("Launch the leaf page")
 	public void launch()
 	{
-		
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
