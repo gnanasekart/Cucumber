@@ -7,7 +7,7 @@ Given Login with valid credential details
 Given navigate to login page
 When enter username and password 
 | demosalesmanager | crmsfa   |
-| demosalesmanager | crmsfa1   |
+| demosalesmanager | crmsfa1  |
 
 And click login button
 

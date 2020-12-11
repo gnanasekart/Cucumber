@@ -8,8 +8,12 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		glue = {"StepDefinition", "TLLoginHooks"},//we now metoned stepdefinition for scenario and hooks file details also
 		monochrome = true,
 		strict = true,
-		plugin = {"html:test-output", "pretty"},
-		dryRun = false,
+		plugin = {"pretty"},
+				//"html:test-output",
+				//"json:target/Myreport/report.json",
+				//"junit:target/Myreport/report.json"
+				
+		dryRun = true,
 		tags = "@first" // tags = "@first or @second"
 		)
 public class LoginHooks extends AbstractTestNGCucumberTests {

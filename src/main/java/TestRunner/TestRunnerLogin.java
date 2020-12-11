@@ -7,7 +7,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 @CucumberOptions(features="D:\\eclipse\\workspace\\Cucumber\\src\\main\\java\\Features\\Login.feature",
 glue={"StepDefinition"},
 plugin= {"html:test-output", "pretty"},
-dryRun = false,
+dryRun = true,
 monochrome = true, 
 strict = true)
 

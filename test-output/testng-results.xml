@@ -1,85 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="50273" started-at="2020-11-18T06:15:37Z" finished-at="2020-11-18T06:16:28Z">
+  <suite name="Default suite" duration-ms="231" started-at="2020-12-06T14:23:16Z" finished-at="2020-12-06T14:23:16Z">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.org.qa.testRunner.LoginTR@10bdf5e5]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:TestRunner.LoginHooks@10bdf5e5]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="50273" started-at="2020-11-18T06:15:37Z" finished-at="2020-11-18T06:16:28Z">
-      <class name="com.org.qa.testRunner.LoginTR">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.org.qa.testRunner.LoginTR@10bdf5e5]" name="setUpClass" is-config="true" duration-ms="185" started-at="2020-11-18T06:15:37Z" finished-at="2020-11-18T06:15:37Z">
+    <test name="Default test" duration-ms="231" started-at="2020-12-06T14:23:16Z" finished-at="2020-12-06T14:23:16Z">
+      <class name="TestRunner.LoginHooks">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:TestRunner.LoginHooks@10bdf5e5]" name="setUpClass" is-config="true" duration-ms="174" started-at="2020-12-06T14:23:16Z" finished-at="2020-12-06T14:23:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="FAIL" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.org.qa.testRunner.LoginTR@10bdf5e5]" name="runScenario" duration-ms="49899" started-at="2020-11-18T06:15:38Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-11-18T06:16:27Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Login into the CRM website"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Login into CRM website"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//b[text()='demosalesmanager']"}
-  (Session info: chrome=86.0.4240.198)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'AMX-RL-19-255-W', ip: '10.10.6.36', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\GNANA~1.SEK\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:61949}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: d921239c1ec568a5ed5a7d20a0f8d7c4
-*** Element info: {Using=xpath, value=//b[text()='demosalesmanager']}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//b[text()='demosalesmanager']"}
-  (Session info: chrome=86.0.4240.198)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'AMX-RL-19-255-W', ip: '10.10.6.36', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\GNANA~1.SEK\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:61949}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: d921239c1ec568a5ed5a7d20a0f8d7c4
-*** Element info: {Using=xpath, value=//b[text()='demosalesmanager']}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy19.getText(Unknown Source)
-at com.org.qa.pages.LoginPage.landPage(LoginPage.java:62)
-at com.qa.org.stepDefinitions.LoginSD.login(LoginSD.java:40)
-at ✽.login into the website(D:\eclipse\workspace\Cucumber\src\test\java\com\org\qa\features\Login.feature:6)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.org.qa.testRunner.LoginTR@10bdf5e5]" name="tearDownClass" is-config="true" duration-ms="107" started-at="2020-11-18T06:16:27Z" finished-at="2020-11-18T06:16:28Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:TestRunner.LoginHooks@10bdf5e5]" name="tearDownClass" is-config="true" duration-ms="3" started-at="2020-12-06T14:23:16Z" finished-at="2020-12-06T14:23:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- com.org.qa.testRunner.LoginTR -->
+      </class> <!-- TestRunner.LoginHooks -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
