@@ -8,7 +8,7 @@ glue= {"StepDefinition"},
 plugin = {"html:test-output", "pretty"},
 monochrome = true,
 strict = true,
-dryRun = false,
+dryRun = true,
 tags = {"not @Smoketestcase"})
 
 public class TRCreateLead extends AbstractTestNGCucumberTests {

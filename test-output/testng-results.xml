@@ -2,19 +2,19 @@
 <testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="231" started-at="2020-12-06T14:23:16Z" finished-at="2020-12-06T14:23:16Z">
+  <suite name="Default suite" duration-ms="177" started-at="2020-12-12T07:35:10Z" finished-at="2020-12-12T07:35:11Z">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:TestRunner.LoginHooks@10bdf5e5]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:TestRunner.LoginHooks@20322d26]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="231" started-at="2020-12-06T14:23:16Z" finished-at="2020-12-06T14:23:16Z">
+    <test name="Default test" duration-ms="177" started-at="2020-12-12T07:35:10Z" finished-at="2020-12-12T07:35:11Z">
       <class name="TestRunner.LoginHooks">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:TestRunner.LoginHooks@10bdf5e5]" name="setUpClass" is-config="true" duration-ms="174" started-at="2020-12-06T14:23:16Z" finished-at="2020-12-06T14:23:16Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:TestRunner.LoginHooks@20322d26]" name="setUpClass" is-config="true" duration-ms="132" started-at="2020-12-12T07:35:10Z" finished-at="2020-12-12T07:35:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:TestRunner.LoginHooks@10bdf5e5]" name="tearDownClass" is-config="true" duration-ms="3" started-at="2020-12-06T14:23:16Z" finished-at="2020-12-06T14:23:16Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:TestRunner.LoginHooks@20322d26]" name="tearDownClass" is-config="true" duration-ms="3" started-at="2020-12-12T07:35:11Z" finished-at="2020-12-12T07:35:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

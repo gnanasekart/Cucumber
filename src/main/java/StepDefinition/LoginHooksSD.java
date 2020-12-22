@@ -98,7 +98,6 @@ RemoteWebDriver driver;
 		driver.findElement(By.xpath("//a[text()='Logout']")).click();
 	}
 
-	
 	@Given("Click Createlead button")
 	public void clickCreateLead()
 	{

@@ -13,6 +13,5 @@ strict = true)
 
 public class TestRunnerLogin extends AbstractTestNGCucumberTests 
 {
-
 	
 }

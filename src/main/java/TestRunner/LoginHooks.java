@@ -13,7 +13,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 				//"json:target/Myreport/report.json",
 				//"junit:target/Myreport/report.json"
 				
-		dryRun = true,
+		dryRun = false,
 		tags = "@first" // tags = "@first or @second"
 		)
 public class LoginHooks extends AbstractTestNGCucumberTests {
