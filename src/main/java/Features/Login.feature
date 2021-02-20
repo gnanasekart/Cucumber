@@ -1,9 +1,9 @@
 Feature: Login into CRM site
 This feature to verify the login feature
 
-#BAckground keyword used to reduce multi time code repetration inside scenatios
+#BAckground keyword used to reduce multi time code repetration inside scenarios
 Background: 
-Given Login with valid credential details
+Given Login with valid credential detail
 Given navigate to login page
 When enter username and password 
 | demosalesmanager | crmsfa   |

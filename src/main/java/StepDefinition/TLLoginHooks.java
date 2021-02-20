@@ -78,6 +78,4 @@ public class TLLoginHooks {
 	{
 		System.out.println("refresh or verify result");
 	}
-
-
 }
